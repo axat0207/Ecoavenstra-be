@@ -1,7 +1,9 @@
 import express from "express";
 import cookieParser from "cookie-parser";
+import cors from 'cors';
 const port = 9999;
 const app = express();
+app.use(cors());
 app.use(cookieParser());
 //@ts-ignore
 app.use(express.json());

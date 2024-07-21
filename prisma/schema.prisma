@@ -67,3 +67,11 @@ model job{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model blog {
+  id Int @id @default(autoincrement())
+  title String
+  user String
+  category String
+  content String
+}

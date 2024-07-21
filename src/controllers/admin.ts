@@ -117,7 +117,8 @@ export const deleteArticle = async (req: Request, res: Response) => {
 
 // Search articles by title
 export const searchArticlesByTitle = async (req: Request, res: Response) => {
-  const { title } = req.query;
+  //@ts-ignore
+  const { title } = req.body;
   try {
     const articles = await prisma.article.findMany({
       where: {
